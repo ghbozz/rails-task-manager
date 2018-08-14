@@ -1,0 +1,13 @@
+<div class="container">
+  <h2>Add a new task</h2>
+
+  <%= form_for(@task) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :details %>
+    <%= f.text_field :details %>
+
+    <%= f.submit class: 'btn btn-primary' %>
+  <% end %>
+</div>

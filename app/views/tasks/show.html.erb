@@ -1,0 +1,6 @@
+<div class="container container-show">
+  <h1><%= @task.name.capitalize %></h1>
+  <p><%= @task.details %></p>
+  <%= link_to 'Back To Tasks', tasks_path, :class => 'btn btn-primary' %>
+  <%= link_to 'Edit Task', edit_path, :class => 'btn btn-primary' %>
+</div>

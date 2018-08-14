@@ -1,0 +1,21 @@
+<div class="container tasks-container">
+  <h1>My Tasks</h1>
+
+  <ul class="list-unstyled">
+    <% @tasks.each do |task| %>
+      <li class="list-group-item">
+        <% if task.completed == true %>
+        <input type="checkbox" checked>
+        <% else %>
+        <input type="checkbox">
+        <% end %>
+            <%= link_to task.name, task_path(task) %>
+            <%= link_to "Delete", task_path(task), :class => 'btn btn-danger',
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>
+      </li>
+    <% end %>
+  </ul>
+
+  <%= link_to 'Add a Task', new_path, :class => 'btn btn-primary' %>
+</div>
